@@ -62,7 +62,7 @@
             <div class="login-box ptb--100">
                 <form name="signin" method="POST">
                     <div class="login-form-head">
-                        <h4>ADMIN PANEL</h4>
+                        <h2>ADMIN PANEL</h2>
                         <p>Employee Leave Management System</p>
                     </div>
                     <div class="login-form-body">

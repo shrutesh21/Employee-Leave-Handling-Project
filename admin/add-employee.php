@@ -222,14 +222,14 @@
                                         <p class="text-muted font-14 mb-4">Please fill up the form in order to add employee records</p>
 
                                         <div class="form-group">
-                                            <label for="example-text-input" class="col-form-label">Employee ID</label>
-                                            <input class="form-control" name="empcode" type="text" autocomplete="off" required id="empcode" onBlur="checkAvailabilityEmpid()">
+                                            <label for="example-text-input" class="col-form-label" >Employee ID</label>
+                                            <input class="form-control" name="empcode" pattern="[0-9]{1}" title="only 1 digit is allowed" type="text" autocomplete="off" required id="empcode" onBlur="checkAvailabilityEmpid()">
                                         </div>
                                     
 
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">First Name</label>
-                                            <input class="form-control" name="firstName"  type="text" required id="example-text-input">
+                                            <input class="form-control" name="firstName" pattern="[A-Za-z]+" title="spaces are not allowed"  type="text" required id="example-text-input">
                                         </div>
 
                                         <div class="form-group">
@@ -276,7 +276,7 @@
 
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Contact Number</label>
-                                            <input class="form-control" name="mobileno" type="tel"  maxlength="10" autocomplete="off" required>
+                                            <input class="form-control" name="mobileno" type="tel"  pattern="[0-9]+" title="only numbers are allowed" maxlength="10" autocomplete="off" required>
                                         </div>
 
 

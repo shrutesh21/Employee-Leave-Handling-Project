@@ -35,6 +35,34 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Admin Panel - Employee Leave</title>
+
+
+
+     <script type ="text/javascript">
+	    function lettersOnly(input){
+		    var regex = /[^a-z]/gi;
+		    input.value = input.value.replace(regex,"");
+		}
+	</script>
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="../assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -161,29 +189,40 @@
                                 </button>
                                  </div><?php }?>
                                 
-                                <form method="POST">
+                                <form method="POST" >
+>
                                  <div class="card-body">
                                         
                                         <p class="text-muted font-14 mb-4">Please fill up the form in order to add new department</p>
 
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Department Name</label>
-                                            <input class="form-control" name="departmentname" type="text" required id="example-text-input" >
+                                            <input class="form-control" name="departmentname" placeholder ="enter only letters" onkeyup="lettersOnly(this)"
+ maxlength = "8" size = "8"type="text"  required id="example-text-input" >
                                         </div>
 
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Shortform</label>
-                                            <input class="form-control" name="departmentshortname" type="text" autocomplete="off" required id="example-text-input" >
+                                            <input class="form-control" name="departmentshortname" placeholder ="enter only letters" onkeyup="lettersOnly(this)"
+ maxlength = "4" size = "4"type="text" autocomplete="off" required id="example-text-input" >
                                         </div>
 
                                         <div class="form-group">
                                             <label for="example-email-input" class="col-form-label">Code</label>
-                                            <input class="form-control" name="deptcode" type="text" autocomplete="off" required id="example-email-input" >
+                                            <input class="form-control" name="deptcode"placeholder ="enter only deptcode" maxlength = "10" size = "10"type="text" autocomplete="off" required id="example-email-input" >
                                         </div>
 
                                         <button class="btn btn-primary" name="add" id="add" type="submit">ADD</button>
-                                        
+                                
+        
                                     </div>
+                                    
+
+
+
+
+
+
                                     </form>
                         </div> 
                     </div>
@@ -199,6 +238,7 @@
         <!-- footer area end-->
         </div>
         <!-- main content area end -->
+
 
         
     </div>
@@ -238,6 +278,7 @@
     <script src="../assets/js/plugins.js"></script>
     <script src="../assets/js/scripts.js"></script>
 </body>
+
 
 </html>
 

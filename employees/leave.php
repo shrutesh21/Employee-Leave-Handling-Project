@@ -204,7 +204,7 @@
 
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Describe Your Conditions</label>
-                                            <textarea class="form-control" name="description" type="text" name="description" length="400" id="example-text-input" rows="5"></textarea>
+                                            <textarea class="form-control" name="description" type="text" name="description" maxlength="100" id="example-text-input" rows="5"></textarea>
                                         </div>
 
                                         <button class="btn btn-primary" name="apply" id="apply" type="submit">SUBMIT</button>

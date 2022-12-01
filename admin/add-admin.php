@@ -209,7 +209,7 @@
 
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Full Name</label>
-                                            <input class="form-control" name="fullname"  type="text" required id="example-text-input">
+                                            <input class="form-control" name="fullname" pattern="[A-Za-z]+" title="only alphabets are allowed"  type="text" required id="example-text-input">
                                         </div>
 
                                         <div class="form-group">
@@ -227,7 +227,7 @@
 
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Password</label>
-                                            <input class="form-control" name="password" type="password" autocomplete="off" required>
+                                            <input class="form-control" name="password" pattern="[0-9-$-@]+" title="Can contain only numbers,$,@" type="password" autocomplete="off" required>
                                         </div>
 
                                         <div class="form-group">

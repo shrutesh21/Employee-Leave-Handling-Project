@@ -30,6 +30,54 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Admin Panel - Employee Leave</title>
+
+
+
+
+
+
+
+
+
+
+
+    <script type ="text/javascript">
+	    function lettersOnly(input){
+		    var regex = /[^a-z]/gi;
+		    input.value = input.value.replace(regex,"");
+		}
+	</script>
+
+    
+
+
+
+
+
+    <script>
+	    $(function(){
+		    $("button").on("click",function(){
+			    var text = $(this).text();
+			    alert(text);
+		    });
+	    });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="../assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -156,7 +204,7 @@
                                 </button>
                                  </div><?php }?>
                                 
-                                <form method="POST">
+                                <form method="POST" >
                                  <div class="card-body">
                                         
                                         <p class="text-muted font-14 mb-4">Please make changes on the form below in order to update department</p>
@@ -177,25 +225,49 @@
 
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Department Name</label>
-                                            <input class="form-control" name="departmentname" type="text" required id="example-text-input" value="<?php echo htmlentities($result->DepartmentName);?>">
+                                            <input class="form-control" name="departmentname" placeholder ="enter only letters" onkeyup="lettersOnly(this)"
+ maxlength = "8" size = "8" type="text" required id="example-text-input" value="<?php echo htmlentities($result->DepartmentName);?>">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Shortform</label>
-                                            <input class="form-control" name="departmentshortname" type="text" autocomplete="off" required id="example-text-input" value="<?php echo htmlentities($result->DepartmentShortName);?>">
+                                            <input class="form-control" name="departmentshortname" placeholder ="enter only letters" onkeyup="lettersOnly(this)"
+   maxlength = "4" size = "4"type="text" autocomplete="off" required id="example-text-input" value="<?php echo htmlentities($result->DepartmentShortName);?>">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="example-email-input" class="col-form-label">Code</label>
-                                            <input class="form-control" name="deptcode" type="text" autocomplete="off" required id="example-email-input" value="<?php echo htmlentities($result->DepartmentCode);?>">
+                                            <input class="form-control" name="deptcode" placeholder ="enter the deptcode" maxlength = "10" size = "10"type="text" autocomplete="off" required id="example-email-input" value="<?php echo htmlentities($result->DepartmentCode);?>">
                                         </div>
 
                                         <?php }
                                         }?>
 
                                         <button class="btn btn-primary" name="update" id="update" type="submit">MAKE CHANGES</button>
+                                <script>
+	                                 $(function(){
+		                                 $("button").on("click",function(){
+			                                var text = $(this).text();
+			                                alert(text);
+		                                    });
+	                                    });
+                                </script>
+   
                                         
+
+
+
+
+
                                     </div>
+                                    <script>
+	                                 $(function(){
+		                                 $("button").on("click",function(){
+			                                var text = $(this).text();
+			                                alert(text);
+		                                    });
+	                                    });
+                                    </script>
                          </form>
                          </div>
                     </div>

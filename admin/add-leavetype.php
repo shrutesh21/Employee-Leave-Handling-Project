@@ -165,12 +165,12 @@
 
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Leave Type</label>
-                                            <input class="form-control" name="leavetype" type="text" required id="example-text-input" required>
+                                            <input class="form-control" name="leavetype" maxlength="20" pattern="[A-Za-z' ']+" title="Only alphabets are allowed" type="text" required id="example-text-input" required>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Short Description</label>
-                                            <input class="form-control" name="description" type="text" autocomplete="off" required id="example-text-input" required>
+                                            <input class="form-control" name="description" maxlength="100"  pattern="[A-Za-z-' '-.-,]+" title="Only alphabets are allowed" type="text" autocomplete="off" required id="example-text-input" required>
                                                 
                                         </div>
 
